@@ -40,6 +40,9 @@ import androidx.annotation.AnyRes
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
 
+/**
+ * A PIN entry widget.
+ */
 class PinEntryView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -47,40 +50,87 @@ class PinEntryView @JvmOverloads constructor(
 ) : ViewGroup(context, attrs, defStyleAttr) {
     companion object {
         //region Accent types
+        /**
+         * [AccentType] that draws no accent.
+         */
         const val ACCENT_NONE = 0
+        /**
+         * [AccentType] that draws the accents for all characters.
+         */
         const val ACCENT_ALL = 1
+        /**
+         * [AccentType] that draws the accent for only the focused character.
+         */
         const val ACCENT_CHARACTER = 2
         //endregion Accent types
     }
 
-    // Number of digits
+    /**
+     * Specifies the required length of the PIN.
+     */
     val digits: Int
 
-    // Input type
+    /**
+     * Specifies whether the PIN is a [number][InputType.TYPE_CLASS_NUMBER] or
+     * [text][InputType.TYPE_CLASS_TEXT].
+     */
     val inputType: Int
 
-    // Pin digit dimensions and styles
+    /**
+     * Specifies the width of each character field view.
+     */
     val digitWidth: Int
+
+    /**
+     * Specifies the height of the view.
+     */
     val digitHeight: Int
 
+    /**
+     * Specifies the drawable or color resource to be used as a background for each character field.
+     */
     @AnyRes
     val digitBackground: Int
+
+    /**
+     * Specifies the space between characters.
+     */
     val digitSpacing: Int
+
+    /**
+     * Specifies the size of the characters.
+     */
     val digitTextSize: Int
 
+    /**
+     * Specifies the resource for the color of the characters.
+     */
     @ColorInt
     val digitTextColor: Int
+
     val digitElevation: Int
 
-    // Accent dimensions and styles
+    /**
+     * Specifies the [AccentType].
+     */
     @AccentType
     val accentType: Int
+
+    /**
+     * Specifies the width of the accent indicator.
+     */
     val accentWidth: Int
 
+    /**
+     * Specifies the resource for the accent color.
+     */
     @ColorInt
     val accentColor: Int
 
-    // Character to use for each digit
+    /**
+     * The string to be displayed for each character.  If set to `null`, the character will not be
+     * masked.
+     */
     val mask: String?
 
     // If set to false, will always draw accent color if type is CHARACTER or ALL
@@ -263,7 +313,7 @@ class PinEntryView @JvmOverloads constructor(
      */
     interface OnPinEnteredListener {
         /**
-         * Event that gets triggered once the PIN input length reaches [getDigits].
+         * Event that gets triggered once the PIN input length reaches [digits].
          */
         fun onPinEntered(pin: String)
     }
