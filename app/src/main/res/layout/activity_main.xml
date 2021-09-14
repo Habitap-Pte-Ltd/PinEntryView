@@ -23,7 +23,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:numDigits="6" />
+        app:numDigits="6"
+        app:pinInputType="number" />
 
     <crypto.rexmtorres.android.pinentry.PinEntryView
         android:id="@+id/pinEntryOtp2"

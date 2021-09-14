@@ -15,7 +15,7 @@
  */
 package crypto.rexmtorres.android.pinentry
 
-import android.annotation.SuppressLint
+import android.content.ClipboardManager
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -29,14 +29,12 @@ import android.text.InputType
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.TypedValue
-import android.view.Gravity
-import android.view.MotionEvent
-import android.view.View
+import android.view.*
 import android.view.View.OnFocusChangeListener
-import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.annotation.AnyRes
 import androidx.annotation.ColorInt
@@ -173,7 +171,10 @@ class PinEntryView @JvmOverloads constructor(
         // Recycle the typed array
         array.recycle()
 
-        // Add child views
+        setOnLongClickListener {
+            showPopupMenu()
+            true
+        }
 
         // Add child views
         addViews()
@@ -242,6 +243,19 @@ class PinEntryView @JvmOverloads constructor(
                 )
             }
         }
+
+        override fun onTouchEvent(event: MotionEvent?): Boolean {
+            if (event!!.action == MotionEvent.ACTION_DOWN) {
+                return performClick()
+            }
+
+            return super.onTouchEvent(event)
+        }
+
+        override fun performClick(): Boolean {
+            showKeyboard()
+            return super.performClick()
+        }
     }
 
     /**
@@ -288,21 +302,6 @@ class PinEntryView @JvmOverloads constructor(
         for (i in 0 until childCount) {
             getChildAt(i).measure(width, height)
         }
-    }
-
-    @SuppressLint("ClickableViewAccessibility")
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        if (event!!.action == MotionEvent.ACTION_DOWN) {
-            // Make sure this view is focused
-            editText.requestFocus()
-
-            // Show keyboard
-            val inputMethodManager = context
-                .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.showSoftInput(editText, 0)
-            return true
-        }
-        return super.onTouchEvent(event)
     }
 
     override fun onSaveInstanceState(): Parcelable {
@@ -383,13 +382,31 @@ class PinEntryView @JvmOverloads constructor(
     var text: CharSequence?
         get() = editText.text
         set(value) {
-            var txt = value
+            println("value = $value")
+            val txt = if (inputType == InputType.TYPE_CLASS_NUMBER) {
+                value?.replace(Regex("\\D+"), "").let {
+                    println("it = $it")
 
-            if ((txt?.length ?: 0) > digits) {
-                txt = txt?.subSequence(0, digits)
+                    val length = it?.length ?: 0
+
+                    if (length > digits) {
+                        it?.subSequence(0, digits)
+                    } else {
+                        it?.subSequence(0, length)
+                    }
+                }
+            } else {
+                val length = value?.length ?: 0
+
+                if (length > digits) {
+                    value?.subSequence(0, digits)
+                } else {
+                    value
+                }
             }
 
             editText.setText(txt)
+            editText.setSelection(txt?.length ?: 0)
         }
 
     /**
@@ -400,15 +417,44 @@ class PinEntryView @JvmOverloads constructor(
         editText.setText("")
     }
 
+    private fun showPopupMenu() {
+        val popupMenu = PopupMenu(context, this)
+        popupMenu.inflate(R.menu.pop_up)
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.paste -> {
+                    val clipboard =
+                        context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    text = clipboard.primaryClip?.getItemAt(0)?.text
+                    true
+                }
+                R.id.clear -> {
+                    clearText()
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
+
+    private fun showKeyboard() {
+        // Make sure this view is focused
+        editText.requestFocus()
+
+        // Show keyboard
+        val inputMethodManager = context
+            .getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.showSoftInput(editText, 0)
+    }
+
     /**
      * Create views and add them to the view group
      */
     private fun addViews() {
         // Add a digit view for each digit
         for (i in 0 until digits) {
-            val digitView = DigitView(
-                context
-            )
+            val digitView = DigitView(context)
             digitView.width = digitWidth
             digitView.height = digitHeight
             digitView.setBackgroundResource(digitBackground)
@@ -437,6 +483,7 @@ class PinEntryView @JvmOverloads constructor(
                 }
 
                 // Make sure the cursor is at the end
+                println("================ $length")
                 editText.setSelection(length)
 
                 // Provide focus change events to any listener
