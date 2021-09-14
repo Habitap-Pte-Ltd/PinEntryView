@@ -1,4 +1,2 @@
-<manifest package="me.philio.pinentry">
-
-    <application />
-</manifest>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="crypto.rexmtorres.android.pinentry" />

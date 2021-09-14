@@ -1,0 +1,24 @@
+ext.agp_version = "7.0.2"
+ext.kotlin_version = "1.5.30"
+
+ext.androidx_core_version = "1.6.0"
+
+ext.min_sdk_version = 23
+ext.sdk_version = 30
+
+if (project == rootProject) {
+    println "Library Versions:"
+
+    def longest = ext.properties.keySet()
+            .stream()
+            .filter(key -> key.endsWith("_version"))
+            .max(Comparator.comparingInt(String::length))
+            .orElse("")
+            .length()
+
+    ext.properties.sort().each {
+        if (it.key.endsWith("_version")) {
+            println "    ${it.key.padLeft(longest)} => ${it.value}"
+        }
+    }
+}

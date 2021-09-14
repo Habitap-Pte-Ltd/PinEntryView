@@ -1,1 +1,3 @@
-include ':pinentry', ':demo'
+include ":pinentry"
+//include ":demo"
+include ':app'
