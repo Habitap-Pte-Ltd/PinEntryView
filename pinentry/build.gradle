@@ -12,8 +12,8 @@ android {
         minSdkVersion min_sdk_version
         targetSdkVersion sdk_version
 
-        versionCode 1
-        versionName "0.0.1"
+        versionCode 10
+        versionName "1.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
