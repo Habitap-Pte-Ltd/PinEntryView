@@ -1,4 +1,4 @@
-package crypto.rexmtorres.android.pinentry
+package io.github.rexmtorres.android.pinentry
 
 import androidx.annotation.IntDef
 
