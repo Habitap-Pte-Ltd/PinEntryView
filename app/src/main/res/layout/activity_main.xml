@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <io.github.rexmtorres.android.pinentry.PinEntryView
+    <crypto.rexmtorres.android.pinentry.PinEntryView
         android:id="@+id/pinEntryOtp1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         app:numDigits="6"
         app:pinInputType="number" />
 
-    <io.github.rexmtorres.android.pinentry.PinEntryView
+    <crypto.rexmtorres.android.pinentry.PinEntryView
         android:id="@+id/pinEntryOtp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         app:mask="*"
         app:numDigits="6" />
 
-    <io.github.rexmtorres.android.pinentry.PinEntryView
+    <crypto.rexmtorres.android.pinentry.PinEntryView
         android:id="@+id/pinEntryOtp3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
