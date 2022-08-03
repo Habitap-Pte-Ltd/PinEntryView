@@ -143,7 +143,7 @@ class PinEntryView @JvmOverloads constructor(
     // Edit text to handle input
     private lateinit var editText: EditText
 
-    private lateinit var internalOnFocusChangeListener: OnFocusChangeListener
+    private val internalOnFocusChangeListener: OnFocusChangeListener
 
     // Focus change listener to send focus events to
     private var _onFocusChangeListener: OnFocusChangeListener? = null
