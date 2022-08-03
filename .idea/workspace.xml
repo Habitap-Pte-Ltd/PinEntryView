@@ -16,13 +16,29 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="" />
+    <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PinEntryView.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/PinEntryView.app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/pinentry/PinEntryView.pinentry.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/digit_bg_boxed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/digit_bg_boxed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/versions.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/versions.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RF8M747XAFE]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\rexmt\.android\avd\Pixel_3a_XL_API_23.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -42,7 +58,7 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PinEntryView" type="f1a62948:ProjectNode" />
+                <item name="OSSRH-73236" type="f1a62948:ProjectNode" />
               </path>
             </expand>
             <select />
@@ -77,27 +93,40 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/View.java_SELECTED" value="View" />
     <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/ViewGroup.java_SELECTED" value="ViewGroup" />
     <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/ViewGroup.java_ViewGroup_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/widget/EditText.java_SELECTED" value="EditText" />
+    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/widget/EditText.java_SELECTED" value="EditText" />
+    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/widget/TextView.java_SELECTED" value="TextView" />
+    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/OSSRH-73236/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
     <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/crypto/rexmtorres/android/pinentry/PinEntryView.kt_PinEntryView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/crypto/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
     <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
     <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/me/philio/pinentry/PinEntryView.java_PinEntryView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/me/philio/pinentry/PinEntryView.java_SELECTED" value="PinEntryView" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/pinentry/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pinentry/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="experimental" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\pinentry\src\main\res\drawable" />
       <recent name="D:\rexmt\Development\Personal\Git\PinEntryView" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\color" />
+      <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\drawable" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="PinEntryView.app" />
+      <module name="OSSRH-73236.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -110,8 +139,7 @@
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -142,7 +170,7 @@
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
@@ -168,8 +196,7 @@
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />

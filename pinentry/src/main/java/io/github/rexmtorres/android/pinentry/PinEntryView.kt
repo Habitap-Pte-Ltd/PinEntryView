@@ -19,6 +19,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Rect
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.Parcelable.Creator
@@ -28,6 +29,7 @@ import android.text.InputFilter.LengthFilter
 import android.text.InputType
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.util.Log
 import android.util.TypedValue
 import android.view.*
 import android.view.View.OnFocusChangeListener
@@ -39,6 +41,7 @@ import android.widget.TextView
 import androidx.annotation.AnyRes
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
+import java.lang.Integer.min
 
 /**
  * A PIN entry widget.
@@ -140,6 +143,8 @@ class PinEntryView @JvmOverloads constructor(
     // Edit text to handle input
     private lateinit var editText: EditText
 
+    private lateinit var internalOnFocusChangeListener: OnFocusChangeListener
+
     // Focus change listener to send focus events to
     private var _onFocusChangeListener: OnFocusChangeListener? = null
 
@@ -228,6 +233,29 @@ class PinEntryView @JvmOverloads constructor(
 
         // Add child views
         addViews()
+
+        internalOnFocusChangeListener = OnFocusChangeListener { v, hasFocus ->
+            if (v == this) {
+                var previousHasNoText = true
+
+                for (i in 0 until digits) {
+                    val entryView = getChildAt(i) as DigitView
+                    val hasNoText = entryView.text.isNullOrEmpty()
+
+                    Log.i("PinEntryView", "onFocusChange: DigitView $i")
+                    Log.i("PinEntryView", "onFocusChange:     text = ${entryView.text?.let { "'$it'" }}")
+                    Log.i("PinEntryView", "onFocusChange:     hasNoText = $hasNoText")
+                    Log.i("PinEntryView", "onFocusChange:     previousHasNoText = $previousHasNoText")
+
+                    entryView.isActivated = hasFocus &&
+                            (((i == 0) && hasNoText) ||
+                                    ((i == (digits - 1)) && !previousHasNoText) ||
+                                    (!previousHasNoText && hasNoText))
+
+                    previousHasNoText = hasNoText
+                }
+            }
+        }
     }
 
     /**
@@ -266,7 +294,8 @@ class PinEntryView @JvmOverloads constructor(
     inner class DigitView @JvmOverloads constructor(
         context: Context?,
         attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0
+        defStyleAttr: Int = 0,
+        private val name: String? = null
     ) : TextView(context, attrs, defStyleAttr) {
         /**
          * Paint used to draw accent
@@ -280,6 +309,8 @@ class PinEntryView @JvmOverloads constructor(
         }
 
         override fun onDraw(canvas: Canvas) {
+            Log.i("DigitView", "onDraw: name = ${name.let { "'$it'" }}, isActivated = $isActivated")
+
             super.onDraw(canvas)
 
             // If selected draw the accent
@@ -430,33 +461,44 @@ class PinEntryView @JvmOverloads constructor(
      */
     @Suppress("unused")
     var text: CharSequence?
-        get() = editText.text
+        get() = synchronized(editText) { editText.text }
         set(value) {
-            println("value = $value")
-            val txt = if (inputType == InputType.TYPE_CLASS_NUMBER) {
-                value?.replace(Regex("\\D+"), "").let {
-                    println("it = $it")
+            synchronized(editText) {
+                Log.i("PinEntryView", "setText: value = ${value?.let { "'$it'" }}")
 
-                    val length = it?.length ?: 0
+                val txt = if (inputType == InputType.TYPE_CLASS_NUMBER) {
+                    value?.replace(Regex("\\D+"), "").let {
+                        Log.i("PinEntryView", "setText: text = ${value?.let { t -> "'$t'" }}")
+
+                        val length = it?.length ?: 0
+
+                        if (length > digits) {
+                            it?.subSequence(0, digits)
+                        } else {
+                            it?.subSequence(0, length)
+                        }
+                    }
+                } else {
+                    val length = value?.length ?: 0
 
                     if (length > digits) {
-                        it?.subSequence(0, digits)
+                        value?.subSequence(0, digits)
                     } else {
-                        it?.subSequence(0, length)
+                        value
                     }
                 }
-            } else {
-                val length = value?.length ?: 0
 
-                if (length > digits) {
-                    value?.subSequence(0, digits)
+                editText.setText(txt)
+
+                val newText = editText.text
+                Log.i("PinEntryView", "setText: newText = ${newText?.let { "'$it'" }}")
+
+                if (!newText.isNullOrEmpty()) {
+                    editText.setSelection(min(newText.length, digits))
                 } else {
-                    value
+                    editText.setSelection(0)
                 }
             }
-
-            editText.setText(txt)
-            editText.setSelection(txt?.length ?: 0)
         }
 
     /**
@@ -464,7 +506,9 @@ class PinEntryView @JvmOverloads constructor(
      */
     @Suppress("unused")
     fun clearText() {
-        editText.setText("")
+        synchronized(editText) {
+            editText.setText("")
+        }
     }
 
     private fun showPopupMenu() {
@@ -475,7 +519,9 @@ class PinEntryView @JvmOverloads constructor(
                 R.id.paste -> {
                     val clipboard =
                         context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                    text = clipboard.primaryClip?.getItemAt(0)?.text
+                    val cbText = clipboard.primaryClip?.getItemAt(0)?.text
+                    Log.i("PinEntryView", "paste: cbText = ${cbText?.let { t -> "'$t'" }}")
+                    text = cbText
                     true
                 }
                 R.id.clear -> {
@@ -504,7 +550,8 @@ class PinEntryView @JvmOverloads constructor(
     private fun addViews() {
         // Add a digit view for each digit
         for (i in 0 until digits) {
-            val digitView = DigitView(context)
+            val digitView = DigitView(context, name = "$id-$i")
+            digitView.text = ""
             digitView.width = digitWidth
             digitView.height = digitHeight
             digitView.setBackgroundResource(digitBackground)
@@ -533,18 +580,23 @@ class PinEntryView @JvmOverloads constructor(
                 }
 
                 // Make sure the cursor is at the end
-                println("================ $length")
+                Log.i("PinEntryView", "onFocusChange: length = $length")
                 editText.setSelection(length)
 
                 // Provide focus change events to any listener
                 _onFocusChangeListener?.onFocusChange(this@PinEntryView, hasFocus)
+                internalOnFocusChangeListener.onFocusChange(this@PinEntryView, hasFocus)
             }
         editText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable) {
                 val length = s.length
+                var previousHasNoText = true
+
                 for (i in 0 until digits) {
+                    val entryView = getChildAt(i) as DigitView
+
                     if (s.length > i) {
                         val mask = if (mask.isNullOrEmpty()) {
                             s[i].toString()
@@ -552,16 +604,26 @@ class PinEntryView @JvmOverloads constructor(
                             mask
                         }
 
-                        (getChildAt(i) as TextView).text = mask
+                        entryView.text = mask
                     } else {
-                        (getChildAt(i) as TextView).text = ""
+                        entryView.text = ""
                     }
+
+                    val hasNoText = entryView.text.isNullOrEmpty()
+
+                    entryView.isActivated = ((i == 0) && hasNoText) ||
+                            ((i == (digits - 1)) && !previousHasNoText) ||
+                            (!previousHasNoText && hasNoText)
+
+                    previousHasNoText = hasNoText
+
                     if (editText.hasFocus()) {
-                        getChildAt(i).isSelected = accentType == ACCENT_ALL ||
-                                accentType == ACCENT_CHARACTER && (i == length ||
-                                i == digits - 1 && length == digits)
+                        entryView.isSelected = accentType == ACCENT_ALL ||
+                                (accentType == ACCENT_CHARACTER) && ((i == length) ||
+                                (i == (digits - 1)) && (length == digits))
                     }
                 }
+
                 if (length == digits) {
                     _onPinEnteredListener?.onPinEntered(s.toString())
                 }

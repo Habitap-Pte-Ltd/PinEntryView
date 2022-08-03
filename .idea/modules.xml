@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PinEntryView.iml" filepath="$PROJECT_DIR$/.idea/modules/PinEntryView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PinEntryView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PinEntryView.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PinEntryView.pinentry.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PinEntryView.pinentry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/OSSRH-73236.iml" filepath="$PROJECT_DIR$/.idea/modules/OSSRH-73236.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/OSSRH-73236.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/OSSRH-73236.pinentry.unitTest.iml" />
     </modules>
   </component>
 </project>

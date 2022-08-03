@@ -3,7 +3,9 @@ PinEntryView
 
 ## About
 
-A PIN entry view widget for Android.  This is a fork of [Philio/PinEntryView](https://github.com/Philio/PinEntryView), refactored to Kotlin, updated to use the latest Android libraries and added some new features.
+A PIN entry view widget for Android.  This is a fork of
+[Philio/PinEntryView](https://github.com/Philio/PinEntryView), refactored to Kotlin, updated to use
+the latest Android libraries and added some new features.
 
 <img src="docs/demo.gif" width="368" height="776" />
 
@@ -11,6 +13,47 @@ Uses a hidden `EditText` to handle input, hence behaves much in the same was as 
 screen and supports similar features.
 
 ## Change log
+
+* 1.1.0
+  - When using a custom `digitBackground`, you can now specify a color selector to highlight the
+    current entry.  Use `android:state_activated="true"` for this.  Example:
+    ```xml
+    <!-- layout XML -->
+
+    <io.github.rexmtorres.android.pinentry.PinEntryView
+        ...
+        app:digitBackground="@drawable/digit_bg_boxed"
+        app:numDigits="6" />
+    ```
+    ```xml
+    <!-- drawable/digit_bg_boxed.xml -->
+
+    <shape
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+        <solid
+            android:color="@android:color/transparent"/>
+        <corners
+            android:bottomRightRadius="4dp"
+            android:bottomLeftRadius="4dp"
+            android:topLeftRadius="4dp"
+            android:topRightRadius="4dp"/>
+        <stroke
+            android:color="@color/filled_stroke_color"
+            android:width="2dp"/>
+    </shape>
+    ```
+    ```xml
+    <!-- color/filled_stroke_color.xml -->
+    
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:color="#FF5555" android:state_activated="true"/>
+        <item android:alpha="0.42" android:color="#000000"/>
+    </selector>
+    ```
+    
+    <img src="docs/demo_entry_highlight.gif" width="368" />
+  - Fixed crash when pasting text from the clipboard through the context menu.
 
 * 1.0.0
   - Kotlin implementation based on 1.0.6 [Philio/PinEntryView](https://github.com/Philio/PinEntryView)
@@ -22,7 +65,7 @@ screen and supports similar features.
 
 Add the following to your `build.gradle`:
 ```groovy
-implementation "io.github.rexmtorres.android:pinentryview:1.0.0"
+implementation "io.github.rexmtorres.android:pinentryview:1.1.0"
 ```
 
 ## Styling
