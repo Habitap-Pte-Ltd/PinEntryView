@@ -18,7 +18,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

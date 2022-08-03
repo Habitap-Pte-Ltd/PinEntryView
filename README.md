@@ -14,6 +14,9 @@ screen and supports similar features.
 
 ## Change log
 
+* 1.1.1
+  - Minor clean up
+
 * 1.1.0
   - When using a custom `digitBackground`, you can now specify a color selector to highlight the
     current entry.  Use `android:state_activated="true"` for this.  Example:
@@ -65,7 +68,8 @@ screen and supports similar features.
 
 Add the following to your `build.gradle`:
 ```groovy
-implementation "io.github.rexmtorres.android:pinentryview:1.1.0"
+implementation "io.github.rexmtorres.android:pinentryview:1.1.1"
+implementation "io.github.rexmtorres.android:pinentryview:1.1.1"
 ```
 
 ## Styling
