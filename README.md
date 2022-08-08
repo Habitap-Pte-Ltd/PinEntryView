@@ -1,6 +1,8 @@
 PinEntryView
 ============
 
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.rexmtorres.android/pinentryview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.rexmtorres.android%22%20AND%20a:%22pinentryview%22)
+
 ## About
 
 A PIN entry view widget for Android.  This is a fork of
