@@ -59,7 +59,7 @@ implementation "app.habitap:pinentryview:0.0.1"
 
 ## License
 
-Copyright 2021 Rex M. Torres
+Copyright 2022 Habitap Pte. Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
