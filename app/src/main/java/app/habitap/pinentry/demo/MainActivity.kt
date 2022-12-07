@@ -1,9 +1,9 @@
-package crypto.rexmtorres.android.pinentry.demo
+package app.habitap.pinentry.demo
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import crypto.rexmtorres.android.pinentry.demo.databinding.ActivityMainBinding
+import app.habitap.pinentry.demo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

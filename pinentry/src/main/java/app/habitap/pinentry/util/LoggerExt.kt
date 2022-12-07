@@ -1,4 +1,4 @@
-package io.github.rexmtorres.android.pinentry.util
+package app.habitap.pinentry.util
 
 import mu.KLogger
 

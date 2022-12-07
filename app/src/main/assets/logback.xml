@@ -1,6 +1,6 @@
 <configuration>
     <!-- log to normal LogCat -->
-    <appender name="LOGCAT" class="crypto.rexmtorres.android.pinentry.demo.log.LogcatAppender">
+    <appender name="LOGCAT" class="app.habitap.pinentry.demo.log.LogcatAppender">
         <tagEncoder>
             <pattern>[PEVD] %logger{0}</pattern>
         </tagEncoder>

@@ -1,4 +1,4 @@
-package io.github.rexmtorres.android.pinentry
+package app.habitap.pinentry
 
 import androidx.annotation.IntDef
 

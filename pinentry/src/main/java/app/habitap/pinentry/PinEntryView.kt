@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.rexmtorres.android.pinentry
+package app.habitap.pinentry
 
 import android.content.ClipboardManager
 import android.content.Context
@@ -39,7 +39,7 @@ import android.widget.TextView
 import androidx.annotation.AnyRes
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
-import io.github.rexmtorres.android.pinentry.util.debugX
+import app.habitap.pinentry.util.debugX
 import mu.KotlinLogging
 import java.lang.Integer.min
 

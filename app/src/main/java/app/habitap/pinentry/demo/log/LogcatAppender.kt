@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package crypto.rexmtorres.android.pinentry.demo.log
+package app.habitap.pinentry.demo.log
 
 import android.content.Context
 import android.util.Log

@@ -6,11 +6,11 @@ plugins {
 apply from: "../versions.gradle"
 
 android {
-    namespace "crypto.rexmtorres.android.pinentry.demo"
+    namespace "app.habitap.pinentry.demo"
     compileSdk sdk_version
 
     defaultConfig {
-        applicationId "crypto.rexmtorres.android.pinentry.demo"
+        applicationId "app.habitap.pinentry.demo"
         minSdk min_sdk_version
         targetSdk sdk_version
         versionCode 1

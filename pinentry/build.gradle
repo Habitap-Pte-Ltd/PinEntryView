@@ -8,7 +8,7 @@ plugins {
 apply from: "../versions.gradle"
 
 android {
-    namespace "io.github.rexmtorres.android.pinentry"
+    namespace "app.habitap.pinentry"
     compileSdk sdk_version
 
     defaultConfig {

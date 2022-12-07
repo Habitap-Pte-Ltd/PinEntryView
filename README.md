@@ -1,7 +1,7 @@
 PinEntryView
 ============
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.rexmtorres.android/pinentryview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.rexmtorres.android%22%20AND%20a:%22pinentryview%22)
+[![Maven Central](https://img.shields.io/maven-central/v/app.habitap/pinentryview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22app.habitap%22%20AND%20a:%22pinentryview%22)
 
 ## About
 
@@ -16,57 +16,8 @@ screen and supports similar features.
 
 ## Change log
 
-* 1.1.2
-  - Updated to latest dependencies
-  - Disabled logging
-
-* 1.1.1
-  - Minor clean up
-
-* 1.1.0
-  - When using a custom `digitBackground`, you can now specify a color selector to highlight the
-    current entry.  Use `android:state_activated="true"` for this.  Example:
-    ```xml
-    <!-- layout XML -->
-
-    <io.github.rexmtorres.android.pinentry.PinEntryView
-        ...
-        app:digitBackground="@drawable/digit_bg_boxed"
-        app:numDigits="6" />
-    ```
-    ```xml
-    <!-- drawable/digit_bg_boxed.xml -->
-
-    <shape
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="rectangle">
-        <solid
-            android:color="@android:color/transparent"/>
-        <corners
-            android:bottomRightRadius="4dp"
-            android:bottomLeftRadius="4dp"
-            android:topLeftRadius="4dp"
-            android:topRightRadius="4dp"/>
-        <stroke
-            android:color="@color/filled_stroke_color"
-            android:width="2dp"/>
-    </shape>
-    ```
-    ```xml
-    <!-- color/filled_stroke_color.xml -->
-    
-    <selector xmlns:android="http://schemas.android.com/apk/res/android">
-        <item android:color="#FF5555" android:state_activated="true"/>
-        <item android:alpha="0.42" android:color="#000000"/>
-    </selector>
-    ```
-    
-    <img src="docs/demo_entry_highlight.gif" width="368" />
-  - Fixed crash when pasting text from the clipboard through the context menu.
-
-* 1.0.0
-  - Kotlin implementation based on 1.0.6 [Philio/PinEntryView](https://github.com/Philio/PinEntryView)
-  - Implemented support for long-press menu for pasting text and clearing input.
+* 0.0.1
+  - Initial fork based on 1.1.2 [rexmtorres/PinEntryView](https://github.com/rexmtorres/PinEntryView)
 
 ## Download
 
@@ -74,7 +25,7 @@ screen and supports similar features.
 
 Add the following to your `build.gradle`:
 ```groovy
-implementation "io.github.rexmtorres.android:pinentryview:1.1.2"
+implementation "app.habitap:pinentryview:0.0.1"
 ```
 
 ## Styling

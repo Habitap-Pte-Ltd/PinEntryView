@@ -19,9 +19,20 @@
     <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Publishing.md" beforeDir="false" afterPath="$PROJECT_DIR$/Publishing.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/crypto/rexmtorres/android/pinentry/demo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/habitap/pinentry/demo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/crypto/rexmtorres/android/pinentry/demo/MyApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/habitap/pinentry/demo/MyApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/crypto/rexmtorres/android/pinentry/demo/log/LogcatAppender.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/app/habitap/pinentry/demo/log/LogcatAppender.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/AccentType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/app/habitap/pinentry/AccentType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/app/habitap/pinentry/PinEntryView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/util/LoggerExt.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/app/habitap/pinentry/util/LoggerExt.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,10 +122,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewD:/rexmt/Development/Habitap/Git/Android/PinEntryView/pinentry/src/main/java/app/habitap/pinentry/PinEntryView.kt_SELECTED": "PinEntryView",
     "android-custom-viewD:/rexmt/Development/Personal/Git/OSSRH-73236/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED": "PinEntryView",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/rexmt/Development/Personal/Git/PinEntryView",
+    "last_opened_file_path": "D:/rexmt/Development/Habitap/Git/Android/PinEntryView",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -126,6 +138,8 @@
       <recent name="D:\rexmt\Development\Personal\Git\PinEntryView" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\rexmt\Development\Habitap\Git\Android\PinEntryView\app\src\main\java\app\habitap\pinentry\demo" />
+      <recent name="D:\rexmt\Development\Habitap\Git\Android\PinEntryView\pinentry\src\main\java\app\habitap\pinentry" />
       <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\color" />
       <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\drawable" />
     </key>

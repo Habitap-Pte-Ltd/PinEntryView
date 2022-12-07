@@ -1,7 +1,7 @@
-package crypto.rexmtorres.android.pinentry.demo
+package app.habitap.pinentry.demo
 
 import android.app.Application
-import crypto.rexmtorres.android.pinentry.demo.log.LogcatAppender
+import app.habitap.pinentry.demo.log.LogcatAppender
 
 class MyApp : Application() {
     override fun onCreate() {
