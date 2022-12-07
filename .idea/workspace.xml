@@ -17,15 +17,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Publishing.md" beforeDir="false" afterPath="$PROJECT_DIR$/Publishing.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinentry/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/crypto/rexmtorres/android/pinentry/demo/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/crypto/rexmtorres/android/pinentry/demo/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/crypto/rexmtorres/android/pinentry/demo/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/crypto/rexmtorres/android/pinentry/demo/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/AccentType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/AccentType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/versions.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/versions.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[357665078080412]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -45,22 +63,22 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="OSSRH-73236" type="f1a62948:ProjectNode" />
+                <item name="PIN Entry" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="OSSRH-73236" type="f1a62948:ProjectNode" />
+                <item name="PIN Entry" type="f1a62948:ProjectNode" />
                 <item name="pinentry" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="OSSRH-73236" type="f1a62948:ProjectNode" />
+                <item name="PIN Entry" type="f1a62948:ProjectNode" />
                 <item name="pinentry" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="OSSRH-73236" type="f1a62948:ProjectNode" />
+                <item name="PIN Entry" type="f1a62948:ProjectNode" />
                 <item name="pinentry" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="publishing" type="c8890929:TasksNode$1" />
@@ -85,6 +103,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="1y79jRHmhZdVl8gzJ5JKDgvdFLy" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -94,33 +118,22 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/View.java_SELECTED" value="View" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/ViewGroup.java_SELECTED" value="ViewGroup" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/view/ViewGroup.java_ViewGroup_DIMENSIONS" value="1080&#10;1920" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-30/android/widget/EditText.java_SELECTED" value="EditText" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/view/View.java_SELECTED" value="View" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/widget/EditText.java_SELECTED" value="EditText" />
-    <property name="android-custom-viewD:/Android/SDK/sources/android-31/android/widget/TextView.java_SELECTED" value="TextView" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/OSSRH-73236/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/crypto/rexmtorres/android/pinentry/PinEntryView.kt_PinEntryView_DIMENSIONS" value="1080&#10;1920" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/crypto/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED" value="PinEntryView" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/me/philio/pinentry/PinEntryView.java_PinEntryView_DIMENSIONS" value="1080&#10;1920" />
-    <property name="android-custom-viewD:/rexmt/Development/Personal/Git/PinEntryView/pinentry/src/main/java/me/philio/pinentry/PinEntryView.java_SELECTED" value="PinEntryView" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/pinentry/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pinentry/src/main/res/drawable" />
-    <property name="settings.editor.selected.configurable" value="experimental" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewD:/rexmt/Development/Personal/Git/OSSRH-73236/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED": "PinEntryView",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "D:/rexmt/Development/Personal/Git/OSSRH-73236/app/src/main/assets",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\assets" />
+      <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\pinentry\src\main\java\io\github\rexmtorres\android\pinentry\util" />
       <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\pinentry\src\main\res\drawable" />
       <recent name="D:\rexmt\Development\Personal\Git\PinEntryView" />
     </key>
@@ -128,10 +141,14 @@
       <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\color" />
       <recent name="D:\rexmt\Development\Personal\Git\OSSRH-73236\app\src\main\res\drawable" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="crypto.rexmtorres.android.pinentry.demo" />
+      <recent name="crypto.rexmtorres.android.pinentry.demo.log" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.OSSRH-73236:pinentry [publish]">
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="OSSRH-73236.app" />
+  <component name="RunManager" selected="Gradle.Publish to Maven">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="PIN_Entry.app.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -139,6 +156,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -196,6 +214,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -244,27 +263,6 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OSSRH-73236:pinentry [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/pinentry" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="publish" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="PinEntryView:pinentry [dokkaHtml]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -307,9 +305,16 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.demo" />
+      <item itemvalue="Gradle.Publish to Maven" />
+      <item itemvalue="Gradle.PinEntryView:pinentry [dokka]" />
+      <item itemvalue="Gradle.PinEntryView:pinentry [dokkaHtml]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OSSRH-73236:pinentry [publish]" />
+        <item itemvalue="Gradle.Publish to Maven" />
         <item itemvalue="Gradle.PinEntryView:pinentry [dokkaHtml]" />
         <item itemvalue="Gradle.PinEntryView:pinentry [dokka]" />
       </list>
@@ -336,6 +341,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

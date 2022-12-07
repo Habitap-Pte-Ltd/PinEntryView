@@ -1,8 +1,6 @@
 package crypto.rexmtorres.android.pinentry.demo
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import crypto.rexmtorres.android.pinentry.demo.databinding.ActivityMainBinding

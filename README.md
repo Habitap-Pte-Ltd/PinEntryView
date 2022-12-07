@@ -16,6 +16,10 @@ screen and supports similar features.
 
 ## Change log
 
+* 1.1.2
+  - Updated to latest dependencies
+  - Disabled logging
+
 * 1.1.1
   - Minor clean up
 
@@ -70,7 +74,6 @@ screen and supports similar features.
 
 Add the following to your `build.gradle`:
 ```groovy
-implementation "io.github.rexmtorres.android:pinentryview:1.1.1"
 implementation "io.github.rexmtorres.android:pinentryview:1.1.1"
 ```
 

@@ -10,4 +10,4 @@ import androidx.annotation.IntDef
     value = [PinEntryView.ACCENT_NONE, PinEntryView.ACCENT_ALL, PinEntryView.ACCENT_CHARACTER]
 )
 @Retention(AnnotationRetention.SOURCE)
-annotation class AccentType()
+annotation class AccentType

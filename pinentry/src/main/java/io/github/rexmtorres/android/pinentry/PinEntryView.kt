@@ -19,7 +19,6 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.Rect
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.Parcelable.Creator
@@ -29,7 +28,6 @@ import android.text.InputFilter.LengthFilter
 import android.text.InputType
 import android.text.TextWatcher
 import android.util.AttributeSet
-import android.util.Log
 import android.util.TypedValue
 import android.view.*
 import android.view.View.OnFocusChangeListener
@@ -41,6 +39,8 @@ import android.widget.TextView
 import androidx.annotation.AnyRes
 import androidx.annotation.ColorInt
 import androidx.core.content.ContextCompat
+import io.github.rexmtorres.android.pinentry.util.debugX
+import mu.KotlinLogging
 import java.lang.Integer.min
 
 /**
@@ -51,22 +51,28 @@ class PinEntryView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ViewGroup(context, attrs, defStyleAttr) {
+    private val logger = KotlinLogging.logger {}
+
     companion object {
         //region Accent types
         /**
          * [AccentType] that draws no accent.
          */
         const val ACCENT_NONE = 0
+
         /**
          * [AccentType] that draws the accents for all characters.
          */
         const val ACCENT_ALL = 1
+
         /**
          * [AccentType] that draws the accent for only the focused character.
          */
         const val ACCENT_CHARACTER = 2
         //endregion Accent types
     }
+
+    //region Public properties
 
     /**
      * Specifies the required length of the PIN.
@@ -140,6 +146,10 @@ class PinEntryView @JvmOverloads constructor(
     // If set to true, will draw accent color only when focussed.
     val accentRequiresFocus: Boolean
 
+    //endregion Public properties
+
+    //region Private properties
+
     // Edit text to handle input
     private lateinit var editText: EditText
 
@@ -150,6 +160,8 @@ class PinEntryView @JvmOverloads constructor(
 
     // Pin entered listener used as a callback for when all digits have been entered
     private var _onPinEnteredListener: OnPinEnteredListener? = null
+
+    //endregion Private properties
 
     init {
         // Get style information
@@ -242,10 +254,10 @@ class PinEntryView @JvmOverloads constructor(
                     val entryView = getChildAt(i) as DigitView
                     val hasNoText = entryView.text.isNullOrEmpty()
 
-                    Log.i("PinEntryView", "onFocusChange: DigitView $i")
-                    Log.i("PinEntryView", "onFocusChange:     text = ${entryView.text?.let { "'$it'" }}")
-                    Log.i("PinEntryView", "onFocusChange:     hasNoText = $hasNoText")
-                    Log.i("PinEntryView", "onFocusChange:     previousHasNoText = $previousHasNoText")
+                    logger.debugX { "onFocusChange: DigitView $i" }
+                    logger.debugX { "onFocusChange:     text = ${entryView.text?.let { "'$it'" }}" }
+                    logger.debugX { "onFocusChange:     hasNoText = $hasNoText" }
+                    logger.debugX { "onFocusChange:     previousHasNoText = $previousHasNoText" }
 
                     entryView.isActivated = hasFocus &&
                             (((i == 0) && hasNoText) ||
@@ -257,6 +269,8 @@ class PinEntryView @JvmOverloads constructor(
             }
         }
     }
+
+    //region Inner classes/interfaces
 
     /**
      * Save state of the view
@@ -297,6 +311,8 @@ class PinEntryView @JvmOverloads constructor(
         defStyleAttr: Int = 0,
         private val name: String? = null
     ) : TextView(context, attrs, defStyleAttr) {
+        private val logger = KotlinLogging.logger {}
+
         /**
          * Paint used to draw accent
          */
@@ -309,7 +325,7 @@ class PinEntryView @JvmOverloads constructor(
         }
 
         override fun onDraw(canvas: Canvas) {
-            Log.i("DigitView", "onDraw: name = ${name.let { "'$it'" }}, isActivated = $isActivated")
+            logger.debugX { "onDraw: name = ${name.let { "'$it'" }}, isActivated = $isActivated" }
 
             super.onDraw(canvas)
 
@@ -348,6 +364,8 @@ class PinEntryView @JvmOverloads constructor(
          */
         fun onPinEntered(pin: String)
     }
+
+    //endregion Inner classes/interfaces
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         // Position the text views
@@ -464,11 +482,11 @@ class PinEntryView @JvmOverloads constructor(
         get() = synchronized(editText) { editText.text }
         set(value) {
             synchronized(editText) {
-                Log.i("PinEntryView", "setText: value = ${value?.let { "'$it'" }}")
+                logger.debugX { "setText: value = ${value?.let { "'$it'" }}" }
 
                 val txt = if (inputType == InputType.TYPE_CLASS_NUMBER) {
                     value?.replace(Regex("\\D+"), "").let {
-                        Log.i("PinEntryView", "setText: text = ${value?.let { t -> "'$t'" }}")
+                        logger.debugX { "setText: text = ${value?.let { t -> "'$t'" }}" }
 
                         val length = it?.length ?: 0
 
@@ -491,7 +509,7 @@ class PinEntryView @JvmOverloads constructor(
                 editText.setText(txt)
 
                 val newText = editText.text
-                Log.i("PinEntryView", "setText: newText = ${newText?.let { "'$it'" }}")
+                logger.debugX { "setText: newText = ${newText?.let { "'$it'" }}" }
 
                 if (!newText.isNullOrEmpty()) {
                     editText.setSelection(min(newText.length, digits))
@@ -520,14 +538,16 @@ class PinEntryView @JvmOverloads constructor(
                     val clipboard =
                         context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                     val cbText = clipboard.primaryClip?.getItemAt(0)?.text
-                    Log.i("PinEntryView", "paste: cbText = ${cbText?.let { t -> "'$t'" }}")
+                    logger.debugX { "paste: cbText = ${cbText?.let { t -> "'$t'" }}" }
                     text = cbText
                     true
                 }
+
                 R.id.clear -> {
                     clearText()
                     true
                 }
+
                 else -> false
             }
         }
@@ -580,7 +600,7 @@ class PinEntryView @JvmOverloads constructor(
                 }
 
                 // Make sure the cursor is at the end
-                Log.i("PinEntryView", "onFocusChange: length = $length")
+                logger.debugX { "onFocusChange: length = $length" }
                 editText.setSelection(length)
 
                 // Provide focus change events to any listener
