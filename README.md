@@ -74,7 +74,7 @@ screen and supports similar features.
 
 Add the following to your `build.gradle`:
 ```groovy
-implementation "io.github.rexmtorres.android:pinentryview:1.1.1"
+implementation "io.github.rexmtorres.android:pinentryview:1.1.2"
 ```
 
 ## Styling
