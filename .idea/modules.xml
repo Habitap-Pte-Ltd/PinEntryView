@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PIN_Entry.iml" filepath="$PROJECT_DIR$/.idea/modules/PIN_Entry.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry.app.unitTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry.pinentry.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PIN_Entry_View.iml" filepath="$PROJECT_DIR$/.idea/modules/PIN_Entry_View.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PIN_Entry_View.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.main.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/pinentry/PIN_Entry_View.pinentry.unitTest.iml" />
     </modules>
   </component>
 </project>

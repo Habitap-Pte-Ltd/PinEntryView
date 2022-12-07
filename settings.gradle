@@ -22,8 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PIN Entry"
+rootProject.name = "PIN Entry View"
 
 include ":pinentry"
-//include ":demo"
 include ':app'
