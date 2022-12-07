@@ -19,9 +19,7 @@
     <list default="true" id="81111afe-8025-4198-b38f-b6a0a161492d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +39,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app">
           <activation />
         </task>
         <projects_view>
@@ -111,7 +112,7 @@
     "android-custom-viewD:/rexmt/Development/Personal/Git/OSSRH-73236/pinentry/src/main/java/io/github/rexmtorres/android/pinentry/PinEntryView.kt_SELECTED": "PinEntryView",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "D:/rexmt/Development/Personal/Git/PinEntry",
+    "last_opened_file_path": "D:/rexmt/Development/Personal/Git/PinEntryView",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -131,7 +132,7 @@
       <recent name="crypto.rexmtorres.android.pinentry.demo.log" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Gradle.PinEntryView [publish]">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="PIN_Entry_View.app.main" />
       <option name="DEPLOY" value="true" />
@@ -248,6 +249,27 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PinEntryView [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="PinEntryView:pinentry [dokkaHtml]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -294,11 +316,13 @@
       <item itemvalue="Android App.app" />
       <item itemvalue="Android App.demo" />
       <item itemvalue="Gradle.Publish to Maven" />
+      <item itemvalue="Gradle.PinEntryView [publish]" />
       <item itemvalue="Gradle.PinEntryView:pinentry [dokka]" />
       <item itemvalue="Gradle.PinEntryView:pinentry [dokkaHtml]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PinEntryView [publish]" />
         <item itemvalue="Gradle.PinEntryView:pinentry [dokkaHtml]" />
         <item itemvalue="Gradle.PinEntryView:pinentry [dokka]" />
       </list>
